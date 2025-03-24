@@ -1,0 +1,31 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Hardhat files
+cache/
+artifacts/
+typechain-types/
+
+# Environment variables
+.env
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+coverage.json
+
+# Deployment information
+.openzeppelin/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

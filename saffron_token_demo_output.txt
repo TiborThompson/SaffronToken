@@ -1,0 +1,130 @@
+SAFFRON TOKEN (SFN) SHOWCASE
+==================================
+Date: Tue Mar 11 18:20:13 PDT 2025
+
+[1/2] RUNNING COMPREHENSIVE TESTS...
+==================================
+
+
+Compiled 1 Solidity file successfully (evm target: london).
+
+
+  SaffronToken Extended Tests
+    ERC20 Permit Functionality
+      ✔ Should support permits for gasless approvals
+    Edge Cases
+      ✔ Should handle zero transfers correctly
+      ✔ Should revert when transferring to the zero address
+      ✔ Should revert when minting to the zero address
+      ✔ Should revert when burning more than balance
+    Transfer Scenarios
+      ✔ Should handle multiple transfers correctly
+      ✔ Should track total supply correctly after burns
+    Pause Functionality
+      ✔ Should block transfers when paused
+      ✔ Should allow minting when paused and transfers after unpausing
+      ✔ Should allow approvals when paused
+    Multiple Minting and Burning
+      ✔ Should correctly handle multiple mint and burn operations
+
+  SaffronToken Gas Usage
+Gas used for transfer: 53662
+    ✔ Should measure gas for transfer
+Gas used for transferFrom: 61559
+    ✔ Should measure gas for transferFrom
+Gas used for mint: 54959
+    ✔ Should measure gas for mint
+Gas used for burn: 35927
+    ✔ Should measure gas for burn
+Gas used for pause: 27765
+    ✔ Should measure gas for pause
+Gas used for unpause: 27698
+    ✔ Should measure gas for unpause
+Gas used for transferOwnership: 28733
+    ✔ Should measure gas for transferOwnership
+
+  SaffronToken
+    Deployment
+      ✔ Should set the right name and symbol
+      ✔ Should assign the total supply of tokens to the owner
+      ✔ Should set the right owner
+    Transactions
+      ✔ Should transfer tokens between accounts
+      ✔ Should fail if sender doesn't have enough tokens
+    Minting
+      ✔ Should mint tokens to an address when called by owner
+      ✔ Should fail to mint tokens when called by non-owner
+    Burning
+      ✔ Should burn tokens from an account
+    Pausable
+      ✔ Should pause and unpause transfers
+      ✔ Should not allow non-owners to pause
+    Ownership
+      ✔ Should transfer ownership
+      ✔ Should not allow non-owners to transfer ownership
+
+
+  30 passing (716ms)
+
+
+[2/2] RUNNING LOCAL DEPLOYMENT DEMO...
+==================================
+
+
+
+=== SAFFRON TOKEN LOCAL DEMONSTRATION ===
+
+Owner address: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+Recipient address: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+
+-- DEPLOYING TOKEN:
+Name: Saffron
+Symbol: SFN
+Initial Supply: 100000000.0 tokens
+Token deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+-- TOKEN INFO:
+Total Supply: 100000000.0 tokens
+Owner Balance: 100000000.0 tokens
+
+-- MINTING TOKENS:
+Minting 1000.0 tokens to recipient...
+Minted successfully! Transaction: 0xe9d59df10d4ecb9f7e190b716b0d99d46be9e0ca4d554cbfd528ad8fb75ed2f4
+Recipient balance: 1000.0 tokens
+
+-- TRANSFERRING TOKENS:
+Transferring 100.0 tokens to recipient...
+Transferred successfully! Transaction: 0x1686db5771391d79b826b323fa15c3b3355dacc6b3fc7f27d13a6573eed992ea
+New recipient balance: 1100.0 tokens
+
+-- PAUSING TOKEN:
+Token paused successfully! Transaction: 0x120da28747c432cf02eee10eaf2f3ba686c1a9383882927b518441381b1c20de
+
+-- Attempting to transfer while paused (should fail):
+Transfer correctly failed with error: Pausable: paused
+
+-- UNPAUSING TOKEN:
+Token unpaused successfully! Transaction: 0x1b4650c74f6852b31780ae1f73f51926feec08f66d2cdd2c6f14ba134820ba17
+
+-- TRANSFERRING AFTER UNPAUSE:
+Transfer succeeded after unpause! Transaction: 0xed2f18e58b26ca80c43b09f0b654d633333ebb960254f1e034f7ba2f89146d01
+Final recipient balance: 1200.0 tokens
+
+-- BURNING TOKENS:
+Burning 500.0 tokens from recipient...
+Tokens burned successfully! Transaction: 0x02ff646a7b08082c227e0e91af7aad278f130d93de8fb65815916de633fce96d
+Recipient balance after burn: 700.0 tokens
+
+-- TRANSFERRING OWNERSHIP:
+Current owner: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+Ownership transferred! Transaction: 0x6733556fd5d275c9df4583ac993cc0a4b90234ac452664af04dcb82e25a886df
+New owner: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+
+=== DEMONSTRATION COMPLETE ===
+All token functionality successfully demonstrated in a local environment
+
+==================================
+SAFFRON TOKEN DEMO COMPLETED
+ALL TESTS PASSED SUCCESSFULLY
+TOKEN FUNCTIONALITY VERIFIED
+==================================
