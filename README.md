@@ -37,7 +37,7 @@ This project implements Saffron (SFN), a robust ERC-20 token designed for deploy
 
 ## Gas Usage Analysis
 
-Our implementation is optimized for efficiency, with the following gas consumption metrics:
+This implementation is optimized for efficiency, with the following gas consumption metrics:
 
 | Operation            | Gas Usage |
 |----------------------|-----------|
